@@ -1,0 +1,44 @@
+{
+  "name": "@ephox/miniature",
+  "version": "1.0.0",
+  "description": "This library checks versions of TinyMCE.",
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run build",
+    "lint": "tslint src/**/*.ts",
+    "build": "tsc",
+    "test": "bedrock-auto -b phantomjs -d src/test/ts",
+    "test-manual": "bedrock -d src/test/ts",
+    "demo": "parcel serve src/demo/html/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash:7999/tinymce/miniature.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ephox/bedrock": "latest",
+    "@ephox/tslint-rules": "latest",
+    "parcel": "^1.10.3",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "files": [
+    "lib/main",
+    "lib/demo",
+    "lib/test",
+    "src",
+    "tsconfig.json",
+    "readme.md",
+    "LEGAL.txt",
+    "CHANGELOG.txt",
+    "LICENSE.txt"
+  ],
+  "main": "./lib/main/ts/api/Main.js",
+  "module": "./lib/main/ts/api/Main.js",
+  "types": "./lib/main/ts/api/Main.d.ts"
+}

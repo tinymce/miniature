@@ -2,6 +2,7 @@
 *~
 *.iws
 *.sublime-workspace
+.cache
 /lib
 /dist
 /scratch
