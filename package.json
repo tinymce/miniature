@@ -15,7 +15,7 @@
     "url": "ssh://git@stash:7999/tinymce/miniature.git"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "http://nexus:8081/repository/ephox-npm/"
   },
   "keywords": [],
   "author": "",
