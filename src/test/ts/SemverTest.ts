@@ -1,34 +1,34 @@
 import { UnitTest, assert } from '@ephox/bedrock';
-import * as SemVer from '../../main/ts/core/SemVer';
+import * as Semver from '../../main/ts/core/Semver';
 
 UnitTest.test('SemverTest', () => {
 
-  const assertSemverCompare = (expected: SemVer.Comparison, input: SemVer.Version, versionString: string) => {
-    assert.eq(expected, SemVer.compare(input, SemVer.parse(versionString)));
+  const assertSemverCompare = (expected: Semver.Comparison, input: Semver.Version, versionString: string) => {
+    assert.eq(expected, Semver.compare(input, Semver.parse(versionString)));
   };
 
   // patch
-  assertSemverCompare(SemVer.Comparison.LT, SemVer.nu(1, 1, 1), '1.1.2');
-  assertSemverCompare(SemVer.Comparison.EQ, SemVer.nu(1, 1, 1), '1.1.1');
-  assertSemverCompare(SemVer.Comparison.GT, SemVer.nu(1, 1, 1), '1.1.0');
+  assertSemverCompare(Semver.Comparison.LT, Semver.nu(1, 1, 1), '1.1.2');
+  assertSemverCompare(Semver.Comparison.EQ, Semver.nu(1, 1, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.GT, Semver.nu(1, 1, 1), '1.1.0');
 
-  assertSemverCompare(SemVer.Comparison.LT, SemVer.nu(1, 1, 0), '1.1.1');
-  assertSemverCompare(SemVer.Comparison.GT, SemVer.nu(1, 1, 2), '1.1.1');
+  assertSemverCompare(Semver.Comparison.LT, Semver.nu(1, 1, 0), '1.1.1');
+  assertSemverCompare(Semver.Comparison.GT, Semver.nu(1, 1, 2), '1.1.1');
 
   // minor
-  assertSemverCompare(SemVer.Comparison.LT, SemVer.nu(1, 1, 1), '1.2.1');
-  assertSemverCompare(SemVer.Comparison.EQ, SemVer.nu(1, 1, 1), '1.1.1');
-  assertSemverCompare(SemVer.Comparison.GT, SemVer.nu(1, 1, 1), '1.0.1');
+  assertSemverCompare(Semver.Comparison.LT, Semver.nu(1, 1, 1), '1.2.1');
+  assertSemverCompare(Semver.Comparison.EQ, Semver.nu(1, 1, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.GT, Semver.nu(1, 1, 1), '1.0.1');
 
-  assertSemverCompare(SemVer.Comparison.LT, SemVer.nu(1, 0, 1), '1.1.1');
-  assertSemverCompare(SemVer.Comparison.GT, SemVer.nu(1, 2, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.LT, Semver.nu(1, 0, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.GT, Semver.nu(1, 2, 1), '1.1.1');
 
   // major
-  assertSemverCompare(SemVer.Comparison.LT, SemVer.nu(1, 1, 1), '2.1.1');
-  assertSemverCompare(SemVer.Comparison.EQ, SemVer.nu(1, 1, 1), '1.1.1');
-  assertSemverCompare(SemVer.Comparison.GT, SemVer.nu(1, 1, 1), '0.1.1');
+  assertSemverCompare(Semver.Comparison.LT, Semver.nu(1, 1, 1), '2.1.1');
+  assertSemverCompare(Semver.Comparison.EQ, Semver.nu(1, 1, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.GT, Semver.nu(1, 1, 1), '0.1.1');
 
-  assertSemverCompare(SemVer.Comparison.LT, SemVer.nu(0, 1, 1), '1.1.1');
-  assertSemverCompare(SemVer.Comparison.GT, SemVer.nu(2, 1, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.LT, Semver.nu(0, 1, 1), '1.1.1');
+  assertSemverCompare(Semver.Comparison.GT, Semver.nu(2, 1, 1), '1.1.1');
 
 });

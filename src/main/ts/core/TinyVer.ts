@@ -1,4 +1,4 @@
-import * as SemVer from './SemVer';
+import * as Semver from './Semver';
 import { FakeTiny } from '../alien/Types';
 
 // Creates a semver string out of tinymce major and minor properties this also handles
@@ -10,11 +10,11 @@ const createSemVer = function (tinymce: FakeTiny) {
 };
 
 const getVersion = function (tinymce: FakeTiny) {
-  return tinymce ? SemVer.parse(createSemVer(tinymce)) : null;
+  return tinymce ? Semver.parse(createSemVer(tinymce)) : null;
 };
 
 const isLessThan = function (tinymce: FakeTiny, version: string) {
-  return SemVer.compare(getVersion(tinymce), SemVer.parse(version)) === SemVer.Comparison.LT;
+  return Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.LT;
 };
 
 export {
