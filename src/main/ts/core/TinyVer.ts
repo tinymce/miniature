@@ -14,7 +14,7 @@ const getVersion = function (tinymce: FakeTiny) {
 };
 
 const isLessThan = function (tinymce: FakeTiny, version: string) {
-  return SemVer.compare(getVersion(tinymce), SemVer.parse(version)) < 0;
+  return SemVer.compare(getVersion(tinymce), SemVer.parse(version)) === SemVer.Comparison.LT;
 };
 
 export {

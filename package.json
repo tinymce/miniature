@@ -20,7 +20,7 @@
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
-  "dependencies": {
+  "devDependencies": {
     "@ephox/bedrock": "latest",
     "@ephox/tslint-rules": "latest",
     "parcel": "^1.10.3",

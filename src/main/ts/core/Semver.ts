@@ -23,7 +23,7 @@ const parse = (versionString: string): Version => {
   return parts ? nu(toInt(parts[1]), toInt(parts[2]), toInt(parts[3])) : nu(0, 0, 0);
 };
 
-const cmp = (a: number, b: number) => {
+const cmp = (a: Comparison, b: Comparison): Comparison => {
   const delta = a - b;
 
   if (delta === 0) {
@@ -33,7 +33,7 @@ const cmp = (a: number, b: number) => {
   return delta > 0 ? Comparison.GT : Comparison.LT;
 };
 
-const compare = (version1: Version, version2: Version) => {
+const compare = (version1: Version, version2: Version): Comparison => {
   const cmp1 = cmp(version1.major, version2.major);
   if (cmp1 !== Comparison.EQ) {
     return cmp1;
