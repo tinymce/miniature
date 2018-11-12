@@ -17,7 +17,12 @@ const isLessThan = function (tinymce: FakeTiny, version: string) {
   return Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.LT;
 };
 
+const isGreaterThan = function (tinymce: FakeTiny, version: string) {
+  return Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.GT;
+};
+
 export {
   getVersion,
-  isLessThan
+  isLessThan,
+  isGreaterThan
 };
