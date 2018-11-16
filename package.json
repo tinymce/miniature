@@ -1,6 +1,6 @@
 {
   "name": "@ephox/miniature",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "npm run lint && npm run build",
