@@ -1,4 +1,4 @@
-import * as TinyVer from '../core/TinyVer';
+import * as TinyVer from './TinyVer';
 
 export {
   TinyVer

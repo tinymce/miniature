@@ -1,4 +1,4 @@
-import * as Semver from './Semver';
+import * as Semver from '../ver/Semver';
 import { FakeTiny } from '../alien/Types';
 
 // Creates a semver string out of tinymce major and minor properties this also handles
