@@ -1,4 +1,5 @@
 import { TinyVer } from '../../main/ts/api/Main';
+import { console } from '@ephox/dom-globals';
 
 /* tslint:disable:no-console */
 
