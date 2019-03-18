@@ -1,13 +1,13 @@
 {
   "name": "@ephox/miniature",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "npm run lint && npm run build",
     "lint": "tslint src/**/*.ts",
     "build": "tsc",
-    "test": "bedrock-auto -b phantomjs -d src/test/ts",
-    "test-manual": "bedrock -d src/test/ts",
+    "test": "bedrock-auto -b phantomjs -d src/test/ts/browser",
+    "test-manual": "bedrock -d src/test/ts/browser",
     "demo": "parcel serve src/demo/html/index.html"
   },
   "repository": {
@@ -20,10 +20,21 @@
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
+  "dependencies": {
+    "@ephox/agar": "^4.11.4",
+    "@ephox/dom-globals": "^1.1.2",
+    "@ephox/mcagar": "^4.0.0",
+    "@ephox/katamari": "^2.4.10",
+    "@ephox/sugar": "^4.6.12"
+  },
   "devDependencies": {
-    "@ephox/bedrock": "latest",
-    "@ephox/tslint-rules": "latest",
+    "@ephox/bedrock": "^4.0.14",
+    "@ephox/tslint-rules": "^1.0.6",
     "parcel": "^1.10.3",
+    "tinymce": "latest",
+    "tinymce-4.5.x": "npm:tinymce@4.5.x",
+    "tinymce-4.8.x": "npm:tinymce@4.8.x",
+    "tinymce-5.0.x": "npm:tinymce@5.0.x",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
   },

@@ -1,5 +1,5 @@
 import { UnitTest, assert } from '@ephox/bedrock';
-import { TinyVer } from '../../main/ts/api/Main';
+import { TinyVer } from '../../../main/ts/api/Main';
 
 UnitTest.test('TinyVerTest', () => {
   const assertgetVersion = (expected, tiny) => {
