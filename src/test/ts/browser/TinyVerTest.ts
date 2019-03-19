@@ -20,8 +20,8 @@ UnitTest.test('TinyVerTest', () => {
 
   assertgetVersion(v(0, 0, 0), fakeTiny('arne', 'bertil.tommy'));
 
-  assert.eq(true, TinyVer.isLessThan(fakeTiny('4', '5.5'), '4.6.5'))
-  assert.eq(true, TinyVer.isGreaterThan(fakeTiny('4', '5.5'), '4.4.5'))
-  assert.eq(false, TinyVer.isGreaterThan(null as any, '4.5.5'))
-  assert.eq(false, TinyVer.isLessThan(null as any, '4.5.5'))
+  assert.eq(true, TinyVer.isLessThan(fakeTiny('4', '5.5'), '4.6.5'));
+  assert.eq(true, TinyVer.isGreaterThan(fakeTiny('4', '5.5'), '4.4.5'));
+  assert.eq(false, TinyVer.isGreaterThan(null as any, '4.5.5'));
+  assert.eq(false, TinyVer.isLessThan(null as any, '4.5.5'));
 });
