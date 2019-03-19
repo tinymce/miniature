@@ -2,11 +2,12 @@ import { Assertions, GeneralSteps, Pipeline } from '@ephox/agar';
 import { UnitTest } from '@ephox/bedrock';
 import * as VersionLoader from '../../../main/ts/api/VersionLoader';
 import { sAssertVersion } from '../module/AssertVersion';
+import { FakeTiny } from '../../../main/ts/alien/Types';
 
-declare const tinymce;
+declare const tinymce: any;
 
 tinymce.PluginManager.urls.test = '/project/dist/test';
-tinymce.PluginManager.add('test', (editor, url) => {
+tinymce.PluginManager.add('test', (editor: FakeTiny, url: string) => {
   return { url }
 });
 

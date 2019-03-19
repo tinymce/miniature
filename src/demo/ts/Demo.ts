@@ -5,12 +5,14 @@ import { console } from '@ephox/dom-globals';
 
 const fakeTiny = {
   majorVersion: '4',
-  minorVersion: '8.5'
+  minorVersion: '8.5',
+  plugins: {}
 };
 
 const fakeTiny2 = {
   majorVersion: '4',
-  minorVersion: '7.5'
+  minorVersion: '7.5',
+  plugins: {}
 };
 
 console.log(TinyVer.getVersion(fakeTiny));

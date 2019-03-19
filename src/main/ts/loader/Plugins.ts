@@ -1,10 +1,11 @@
 import { Option, Obj, Arr } from "@ephox/katamari";
 import { Step } from "@ephox/agar";
 import { getTinymce } from "./Globals";
+import { FakeTiny } from "../alien/Types";
 
 export interface PluginDetails {
   name: string;
-  instance: <T>(editor, url: string) => T;
+  instance: <T>(editor: FakeTiny, url: string) => T;
   url: Option<string>;
 }
 
