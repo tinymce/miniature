@@ -8,7 +8,7 @@ declare const tinymce: any;
 
 tinymce.PluginManager.urls.test = '/project/dist/test';
 tinymce.PluginManager.add('test', (editor: FakeTiny, url: string) => {
-  return { url }
+  return { url };
 });
 
 const sTestVersion = (loadVersion: string, expectedMajor: number, expectedMinor: number) => {

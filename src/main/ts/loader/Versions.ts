@@ -20,7 +20,7 @@ const sLoadFrom = (customUrl: string, baseUrl: string) => {
       loadFrom(customUrl, baseUrl, next, die);
     })
   ]);
-}
+};
 
 const sRegisterPlugins = (plugins: PluginDetails[]) => Step.sync(() => registerPlugins(plugins));
 
@@ -36,4 +36,3 @@ const sWithVersion = (version: string, step: Step<any, any>) => {
 };
 
 export { sWithVersion, sLoad, sLoadFrom, sUnload };
-

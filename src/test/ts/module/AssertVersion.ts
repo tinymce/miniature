@@ -1,6 +1,6 @@
-import { RawAssertions, Step, Chain } from "@ephox/agar";
-import { getTinymce } from "../../../main/ts/loader/Globals";
-import { FakeTiny } from "../../../main/ts/alien/Types";
+import { RawAssertions, Step, Chain } from '@ephox/agar';
+import { getTinymce } from '../../../main/ts/loader/Globals';
+import { FakeTiny } from '../../../main/ts/alien/Types';
 
 const assertTinymceVersion = (tinymce: FakeTiny, expectedMajor: number, expectedMinor: number) => {
   const major = parseInt(tinymce.majorVersion, 10);
@@ -27,4 +27,4 @@ export {
   assertVersion,
   sAssertVersion,
   cAssertEditorVersion
-}
+};

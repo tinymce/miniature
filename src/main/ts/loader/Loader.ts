@@ -1,6 +1,6 @@
-import { deleteTinymceGlobals, getTinymce } from "./Globals";
-import { loadScript, removeTinymceElements } from "./Script";
-import { updateTinymceUrls } from "./Urls";
+import { deleteTinymceGlobals, getTinymce } from './Globals';
+import { loadScript, removeTinymceElements } from './Script';
+import { updateTinymceUrls } from './Urls';
 
 const versionToPackageName = (version: string) => version === 'latest' ? 'tinymce' : `tinymce-${version}`;
 

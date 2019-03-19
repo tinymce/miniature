@@ -16,4 +16,4 @@ const updateTinymceUrls = (packageName: string) => {
 export {
   setTinymceBaseUrl,
   updateTinymceUrls
-}
+};

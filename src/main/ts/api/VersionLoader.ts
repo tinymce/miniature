@@ -28,5 +28,5 @@ export const sSetupVersion = <T, U>(version: string, testPlugins: string[], call
     return setupVersion(version, testPlugins, (editor, onSuccess, onError) => {
       Pipeline.async({}, [ callback(editor) ], onSuccess, onError);
     }, settings, next, die);
-  })
+  });
 };

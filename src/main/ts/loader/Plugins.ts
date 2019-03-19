@@ -1,7 +1,7 @@
-import { Option, Obj, Arr } from "@ephox/katamari";
-import { Step } from "@ephox/agar";
-import { getTinymce } from "./Globals";
-import { FakeTiny } from "../alien/Types";
+import { Option, Obj, Arr } from '@ephox/katamari';
+import { Step } from '@ephox/agar';
+import { getTinymce } from './Globals';
+import { FakeTiny } from '../alien/Types';
 
 export interface PluginDetails {
   name: string;

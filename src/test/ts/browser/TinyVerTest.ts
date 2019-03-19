@@ -2,11 +2,11 @@ import { UnitTest, assert } from '@ephox/bedrock';
 import { TinyVer } from '../../../main/ts/api/Main';
 import { FakeTiny } from '../../../main/ts/alien/Types';
 
-type VersionBlock = {
+interface VersionBlock {
   major: number;
   minor: number;
   patch: number;
-};
+}
 
 UnitTest.test('TinyVerTest', () => {
   const assertgetVersion = (expected: VersionBlock, tiny: FakeTiny) => {

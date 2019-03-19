@@ -10,4 +10,4 @@ const deleteTinymceGlobals = () => {
 export {
   getTinymce,
   deleteTinymceGlobals
-}
+};
