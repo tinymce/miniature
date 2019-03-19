@@ -14,11 +14,11 @@ const getVersion = function (tinymce: FakeTiny) {
 };
 
 const isLessThan = function (tinymce: FakeTiny, version: string) {
-  return tinymce ? false : Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.LT;
+  return !tinymce ? false : Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.LT;
 };
 
 const isGreaterThan = function (tinymce: FakeTiny, version: string) {
-  return tinymce ? false : Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.GT;
+  return !tinymce ? false : Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.GT;
 };
 
 export {
