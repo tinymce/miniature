@@ -2,12 +2,11 @@ import { Pipeline, Step, TestLogs } from '@ephox/agar';
 import { readPlugins, registerPlugins, sRegisterPlugins } from '../loader/Plugins';
 import * as TinyVersions from '../loader/Versions';
 import { TinyLoader } from '@ephox/mcagar';
-import { FakeTiny } from '../alien/Types';
 
 export type SuccessCallback = (v: any, logs?: TestLogs) => void;
 export type FailureCallback = (err: Error | string, logs?: TestLogs) => void;
-export type SetupCallback = (editor: FakeTiny, success: SuccessCallback, failure: FailureCallback) => void;
-export type SetupCallbackStep = <T, U>(editor: FakeTiny) => Step<T, U>;
+export type SetupCallback = (editor: any, success: SuccessCallback, failure: FailureCallback) => void;
+export type SetupCallbackStep = <T, U>(editor: any) => Step<T, U>;
 
 export type LoaderSetup = (callback: SetupCallback, settings: Record<string, any>, success: SuccessCallback, failure: FailureCallback) => void;
 
