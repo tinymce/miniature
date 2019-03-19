@@ -1,5 +1,7 @@
-import * as TinyVer from '../core/TinyVer';
+import * as TinyVer from './TinyVer';
+import * as VersionLoader from './VersionLoader';
 
 export {
-  TinyVer
+  TinyVer,
+  VersionLoader
 };

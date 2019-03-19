@@ -1,5 +1,5 @@
 import { UnitTest, assert } from '@ephox/bedrock';
-import * as Semver from '../../main/ts/core/Semver';
+import * as Semver from '../../../main/ts/ver/Semver';
 
 UnitTest.test('SemverTest', () => {
 
