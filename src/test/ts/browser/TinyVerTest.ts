@@ -1,4 +1,4 @@
-import { UnitTest, assert } from '@ephox/bedrock';
+import { UnitTest, assert } from '@ephox/bedrock-client';
 import { TinyVer } from '../../../main/ts/api/Main';
 import { FakeTiny } from '../../../main/ts/alien/Types';
 

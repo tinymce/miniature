@@ -1,5 +1,5 @@
 import { Assertions, GeneralSteps, Pipeline } from '@ephox/agar';
-import { UnitTest } from '@ephox/bedrock';
+import { UnitTest } from '@ephox/bedrock-client';
 import * as VersionLoader from '../../../main/ts/api/VersionLoader';
 import { sAssertVersion } from '../module/AssertVersion';
 import { FakeTiny } from '../../../main/ts/alien/Types';

@@ -4,7 +4,7 @@ export interface Version {
   patch: number;
 }
 
-const enum Comparison {
+export const enum Comparison {
   EQ = 0,
   GT = 1,
   LT = -1
@@ -12,15 +12,6 @@ const enum Comparison {
 
 const toInt = (str: string) => {
   return parseInt(str, 10);
-};
-
-const nu = (major: number, minor: number, patch: number) => {
-  return { major, minor, patch };
-};
-
-const parse = (versionString: string): Version => {
-  const parts = /([0-9]+)\.([0-9]+)\.([0-9]+)(?:(\-.+)?)/.exec(versionString);
-  return parts ? nu(toInt(parts[1]), toInt(parts[2]), toInt(parts[3])) : nu(0, 0, 0);
 };
 
 const cmp = (a: Comparison, b: Comparison): Comparison => {
@@ -33,7 +24,16 @@ const cmp = (a: Comparison, b: Comparison): Comparison => {
   return delta > 0 ? Comparison.GT : Comparison.LT;
 };
 
-const compare = (version1: Version, version2: Version): Comparison => {
+export const nu = (major: number, minor: number, patch: number) => {
+  return { major, minor, patch };
+};
+
+export const parse = (versionString: string): Version => {
+  const parts = /([0-9]+)\.([0-9]+)\.([0-9]+)(?:(\-.+)?)/.exec(versionString);
+  return parts ? nu(toInt(parts[1]), toInt(parts[2]), toInt(parts[3])) : nu(0, 0, 0);
+};
+
+export const compare = (version1: Version, version2: Version): Comparison => {
   const cmp1 = cmp(version1.major, version2.major);
   if (cmp1 !== Comparison.EQ) {
     return cmp1;
@@ -50,11 +50,4 @@ const compare = (version1: Version, version2: Version): Comparison => {
   }
 
   return Comparison.EQ;
-};
-
-export {
-  Comparison,
-  nu,
-  parse,
-  compare
 };

@@ -12,12 +12,12 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "lib",
-    "types": []
+    "types": [],
+    "baseUrl": "."
   },
   "include": [
     "src/demo/ts",
     "src/main/ts",
-    "src/test/ts",
-    "node_modules/@ephox/**/*/api/Main.d.ts"
+    "src/test/ts"
   ]
 }
