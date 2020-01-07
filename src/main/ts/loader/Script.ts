@@ -6,11 +6,15 @@ export const loadScript = (url: string, success: () => void, failure: (err: Erro
 
   Attr.set(script, 'src', url);
 
-  DomEvent.bind(script, 'load', () => {
+  const onLoad = DomEvent.bind(script, 'load', () => {
+    onLoad.unbind();
+    onError.unbind();
     success();
   });
 
-  DomEvent.bind(script, 'error', () => {
+  const onError = DomEvent.bind(script, 'error', () => {
+    onError.unbind();
+    onLoad.unbind();
     failure(new Error(`Failed to load script: ${url}`));
   });
 

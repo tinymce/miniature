@@ -1,5 +1,5 @@
 import { Pipeline } from '@ephox/agar';
-import { UnitTest } from '@ephox/bedrock';
+import { UnitTest } from '@ephox/bedrock-client';
 import { sLoad, sWithVersion } from '../../../main/ts/loader/Versions';
 import { sAssertVersion } from '../module/AssertVersion';
 

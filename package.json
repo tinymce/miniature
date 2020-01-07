@@ -1,6 +1,6 @@
 {
   "name": "@ephox/miniature",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "npm run lint && npm run build",
@@ -23,12 +23,13 @@
   "dependencies": {
     "@ephox/agar": "^4.11.4",
     "@ephox/dom-globals": "^1.1.2",
+    "@ephox/katamari": "^4.0.0",
     "@ephox/mcagar": "^4.0.0",
-    "@ephox/katamari": "^2.4.10",
-    "@ephox/sugar": "^4.6.12"
+    "@ephox/sugar": "^5.0.0"
   },
   "devDependencies": {
-    "@ephox/bedrock": "^4.0.14",
+    "@ephox/bedrock-client": "^9.3.2",
+    "@ephox/bedrock-server": "^9.3.2",
     "@ephox/tslint-rules": "^1.0.6",
     "parcel": "^1.10.3",
     "tinymce": "latest",
