@@ -29,3 +29,5 @@ export const sSetupVersion = <T, U> (version: string, testPlugins: string[], cal
     }, settings, next, die, initLogs);
   });
 };
+
+export const sWithVersion = TinyVersions.sWithVersion;
