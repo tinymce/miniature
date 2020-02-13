@@ -21,23 +21,23 @@
   "author": "Tiny Technologies",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ephox/agar": "^4.11.4",
+    "@ephox/agar": "^4.15.2",
     "@ephox/dom-globals": "^1.1.2",
-    "@ephox/katamari": "^4.0.0",
-    "@ephox/mcagar": "^4.0.0",
-    "@ephox/sugar": "^5.0.0"
+    "@ephox/katamari": "^5.0.1",
+    "@ephox/mcagar": "^4.1.2",
+    "@ephox/sugar": "^5.1.2"
   },
   "devDependencies": {
     "@ephox/bedrock-client": "^9.3.2",
     "@ephox/bedrock-server": "^9.3.2",
     "@ephox/tslint-rules": "^1.0.6",
     "parcel": "^1.10.3",
-    "tinymce": "latest",
+    "tinymce": "^5.2.0",
     "tinymce-4.5.x": "npm:tinymce@4.5.x",
     "tinymce-4.8.x": "npm:tinymce@4.8.x",
     "tinymce-5.0.x": "npm:tinymce@5.0.x",
     "tslint": "^5.11.0",
-    "typescript": "^3.1.6"
+    "typescript": "^3.7.5"
   },
   "files": [
     "lib/main",
