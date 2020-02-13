@@ -16,7 +16,7 @@ export const setupVersion = (version: string, testPlugins: string[], callback: S
   Pipeline.async({}, [
     TinyVersions.sWithVersion(version, Step.raw((_, next, die, initLogs) => {
       registerPlugins(plugins);
-      TinyLoader.setup((e, s, f) => callback(e, s, f, initLogs), settings, (v, nextLogs) => next(v, nextLogs || initLogs), die);
+      TinyLoader.setup((e, s, f) => callback(e, s, f, initLogs), settings, (v, nextLogs) => next(v, nextLogs || initLogs), (e, nextLogs) => die(e, nextLogs || initLogs));
     })),
     sRegisterPlugins(plugins)
   ], success, failure, logs);
