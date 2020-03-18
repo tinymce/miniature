@@ -7,8 +7,7 @@
     "lint": "tslint src/**/*.ts",
     "build": "tsc",
     "test": "bedrock-auto -b phantomjs -d src/test/ts/browser",
-    "test-manual": "bedrock -d src/test/ts/browser",
-    "demo": "parcel serve src/demo/html/index.html"
+    "test-manual": "bedrock -d src/test/ts/browser"
   },
   "repository": {
     "type": "git",
@@ -31,7 +30,6 @@
     "@ephox/bedrock-client": "^9.3.2",
     "@ephox/bedrock-server": "^9.3.2",
     "@ephox/tslint-rules": "^1.0.6",
-    "parcel": "^1.10.3",
     "tinymce": "^5.2.0",
     "tinymce-4.5.x": "npm:tinymce@4.5.x",
     "tinymce-4.8.x": "npm:tinymce@4.8.x",
