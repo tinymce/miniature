@@ -12,7 +12,7 @@ UnitTest.test('TinyVerTest', () => {
   const assertgetVersion = (expected: VersionBlock, tiny: FakeTiny) => {
     assert.eq(expected, TinyVer.getVersion(tiny));
   };
-  const fakeTiny = (majorVersion: string, minorVersion: string): FakeTiny => ({ majorVersion, minorVersion, plugins: {} });
+  const fakeTiny = (majorVersion: string, minorVersion: string): FakeTiny => ({ majorVersion, minorVersion });
   const v = (major: number, minor: number, patch: number): VersionBlock => ({ major, minor, patch });
 
   assertgetVersion(v(1, 2, 3), fakeTiny('1', '2.3'));
