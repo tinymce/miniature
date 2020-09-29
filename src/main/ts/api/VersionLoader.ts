@@ -22,12 +22,11 @@ export const setupVersion = (version: string, testPlugins: string[], callback: S
   ], success, failure, logs);
 };
 
-export const sSetupVersion = <T, U> (version: string, testPlugins: string[], callback: SetupCallbackStep, settings: Record<string, any>) => {
-  return Step.raw((_, next, die, initLogs) => {
-    return setupVersion(version, testPlugins, (editor, onSuccess, onError, logs) => {
+export const sSetupVersion = <T, U> (version: string, testPlugins: string[], callback: SetupCallbackStep, settings: Record<string, any>) =>
+  Step.raw((_, next, die, initLogs) =>
+    setupVersion(version, testPlugins, (editor, onSuccess, onError, logs) => {
       Pipeline.async({}, [ callback(editor) ], onSuccess, onError, logs);
-    }, settings, next, die, initLogs);
-  });
-};
+    }, settings, next, die, initLogs)
+  );
 
 export const sWithVersion = TinyVersions.sWithVersion;

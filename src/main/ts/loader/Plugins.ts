@@ -1,29 +1,25 @@
-import { Option, Obj, Arr } from '@ephox/katamari';
 import { Step } from '@ephox/agar';
-import { getTinymce } from './Globals';
+import { Arr, Obj, Optional } from '@ephox/katamari';
 import { FakeTiny } from '../alien/Types';
+import { getTinymce } from './Globals';
 
 export interface PluginDetails {
   name: string;
   instance: <T>(editor: FakeTiny, url: string) => T;
-  url: Option<string>;
+  url: Optional<string>;
 }
 
-const readAllPlugins = (): PluginDetails[] => {
-  return getTinymce().map((tinymce) => {
-    return Obj.mapToArray(tinymce.PluginManager.lookup, (plugin, name) => {
-      return {
-        name,
-        instance: plugin.instance,
-        url: Obj.get(tinymce.PluginManager.urls, name)
-      };
-    });
-  }).getOr([]);
-};
+const readAllPlugins = (): PluginDetails[] =>
+  getTinymce().map((tinymce) =>
+    Obj.mapToArray(tinymce.PluginManager.lookup, (plugin, name) => ({
+      name,
+      instance: plugin.instance,
+      url: Obj.get(tinymce.PluginManager.urls, name)
+    }))
+  ).getOr([]);
 
-const readPlugins = (pluginNames: string[]): PluginDetails[] => {
-  return Arr.filter(readAllPlugins(), (plugin) => Arr.contains(pluginNames, plugin.name));
-};
+const readPlugins = (pluginNames: string[]): PluginDetails[] =>
+  Arr.filter(readAllPlugins(), (plugin) => Arr.contains(pluginNames, plugin.name));
 
 const registerPlugins = (plugins: PluginDetails[]) => {
   getTinymce().each((tinymce) => {
@@ -34,7 +30,8 @@ const registerPlugins = (plugins: PluginDetails[]) => {
   });
 };
 
-const sRegisterPlugins = (plugins: PluginDetails[]) => Step.sync(() => registerPlugins(plugins));
+const sRegisterPlugins = (plugins: PluginDetails[]) =>
+  Step.sync(() => registerPlugins(plugins));
 
 export {
   readAllPlugins,

@@ -1,6 +1,6 @@
 import { Pipeline } from '@ephox/agar';
 import { UnitTest } from '@ephox/bedrock-client';
-import { sLoad, sWithVersion } from '../../../main/ts/loader/Versions';
+import { sLoad, sWithVersion } from 'tinymce/miniature/loader/Versions';
 import { sAssertVersion } from '../module/AssertVersion';
 
 UnitTest.asynctest('TinyVersionsTest', (success, failure) => {
