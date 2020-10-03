@@ -1,6 +1,6 @@
-import { Global, Option } from '@ephox/katamari';
+import { Global, Optional } from '@ephox/katamari';
 
-const getTinymce = () => Option.from(Global.tinymce);
+const getTinymce = () => Optional.from(Global.tinymce);
 
 const deleteTinymceGlobals = () => {
   delete Global.tinymce;

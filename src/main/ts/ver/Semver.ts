@@ -10,9 +10,8 @@ export const enum Comparison {
   LT = -1
 }
 
-const toInt = (str: string) => {
-  return parseInt(str, 10);
-};
+const toInt = (str: string) =>
+  parseInt(str, 10);
 
 const cmp = (a: Comparison, b: Comparison): Comparison => {
   const delta = a - b;
@@ -24,9 +23,8 @@ const cmp = (a: Comparison, b: Comparison): Comparison => {
   return delta > 0 ? Comparison.GT : Comparison.LT;
 };
 
-export const nu = (major: number, minor: number, patch: number) => {
-  return { major, minor, patch };
-};
+export const nu = (major: number, minor: number, patch: number) =>
+  ({ major, minor, patch });
 
 export const parse = (versionString: string): Version => {
   const parts = /([0-9]+)\.([0-9]+)\.([0-9]+)(?:(\-.+)?)/.exec(versionString);

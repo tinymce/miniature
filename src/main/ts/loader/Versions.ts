@@ -4,25 +4,24 @@ import { PluginDetails, readAllPlugins, registerPlugins } from './Plugins';
 
 const sUnload = Step.sync(unload);
 
-const sLoad = (version: string) => {
-  return GeneralSteps.sequence([
+const sLoad = (version: string) =>
+  GeneralSteps.sequence([
     sUnload,
     Step.async((next, die) => {
       load(version, next, die);
     })
   ]);
-};
 
-const sLoadFrom = (customUrl: string, baseUrl: string) => {
-  return GeneralSteps.sequence([
+const sLoadFrom = (customUrl: string, baseUrl: string) =>
+  GeneralSteps.sequence([
     sUnload,
     Step.async((next, die) => {
       loadFrom(customUrl, baseUrl, next, die);
     })
   ]);
-};
 
-const sRegisterPlugins = (plugins: PluginDetails[]) => Step.sync(() => registerPlugins(plugins));
+const sRegisterPlugins = (plugins: PluginDetails[]) =>
+  Step.sync(() => registerPlugins(plugins));
 
 const sWithVersion = (version: string, step: Step<any, any>) => {
   const plugins = readAllPlugins();

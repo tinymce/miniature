@@ -1,7 +1,6 @@
-import { TinyVer } from '../../main/ts/api/Main';
-import { console } from '@ephox/dom-globals';
+import { TinyVer } from 'tinymce/miniature/api/Main';
 
-/* tslint:disable:no-console */
+/* eslint-disable no-console */
 
 const fakeTiny = {
   majorVersion: '4',

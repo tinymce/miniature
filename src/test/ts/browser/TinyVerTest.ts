@@ -1,6 +1,6 @@
-import { UnitTest, assert } from '@ephox/bedrock-client';
-import { TinyVer } from '../../../main/ts/api/Main';
-import { FakeTiny } from '../../../main/ts/alien/Types';
+import { assert, UnitTest } from '@ephox/bedrock-client';
+import { FakeTiny } from 'tinymce/miniature/alien/Types';
+import { TinyVer } from 'tinymce/miniature/api/Main';
 
 interface VersionBlock {
   major: number;

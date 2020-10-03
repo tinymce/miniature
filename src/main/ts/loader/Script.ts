@@ -1,10 +1,10 @@
-import { Element, Attr, DomEvent, Insert, Body, SelectorFilter, Remove } from '@ephox/sugar';
 import { Arr, Strings } from '@ephox/katamari';
+import { Attribute, DomEvent, Insert, Remove, SelectorFilter, SugarBody, SugarElement } from '@ephox/sugar';
 
 export const loadScript = (url: string, success: () => void, failure: (err: Error) => void) => {
-  const script = Element.fromTag('script');
+  const script = SugarElement.fromTag('script');
 
-  Attr.set(script, 'src', url);
+  Attribute.set(script, 'src', url);
 
   const onLoad = DomEvent.bind(script, 'load', () => {
     onLoad.unbind();
@@ -18,13 +18,14 @@ export const loadScript = (url: string, success: () => void, failure: (err: Erro
     failure(new Error(`Failed to load script: ${url}`));
   });
 
-  Insert.append(Body.body(), script);
+  Insert.append(SugarBody.body(), script);
 };
 
-const isTinymcePackageUrl = (url: string) => Strings.contains(url, '/node_modules/tinymce/') || Strings.contains(url, '/node_modules/tinymce-');
-const hasPackageUrl = (name: string) => (elm: Element) => {
-  return Attr.has(elm, name) && isTinymcePackageUrl(Attr.get(elm, name));
-};
+const isTinymcePackageUrl = (url: string) =>
+  Strings.contains(url, '/node_modules/tinymce/') || Strings.contains(url, '/node_modules/tinymce-');
+
+const hasPackageUrl = (name: string) => (elm: SugarElement<Element>) =>
+  Attribute.getOpt(elm, name).exists(isTinymcePackageUrl);
 
 export const removeTinymceElements = () => {
   const elements = Arr.flatten([
