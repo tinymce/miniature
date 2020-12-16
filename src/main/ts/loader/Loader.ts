@@ -4,7 +4,7 @@ import { updateTinymceUrls } from './Urls';
 
 const versionToPackageName = (version: string) => version === 'latest' ? 'tinymce' : `tinymce-${version}`;
 
-const loadFrom = (customUrl: string, baseUrl: string, success: () => void, failure: (err: Error) => void) => {
+const loadFrom = (customUrl: string, baseUrl: string, success: () => void, failure: (err: Error) => void): void => {
   unload();
   loadScript(customUrl, () => {
     getTinymce().each((tinymce) => {
@@ -15,7 +15,7 @@ const loadFrom = (customUrl: string, baseUrl: string, success: () => void, failu
   }, failure);
 };
 
-const load = (version: string, success: () => void, failure: (err: Error) => void) => {
+const load = (version: string, success: () => void, failure: (err: Error) => void): void => {
   const packageName = versionToPackageName(version);
 
   unload();
@@ -25,10 +25,10 @@ const load = (version: string, success: () => void, failure: (err: Error) => voi
   }, failure);
 };
 
-const unload = () => {
+const unload = (): void => {
   getTinymce().each((tinymce) => tinymce.remove());
   removeTinymceElements();
   deleteTinymceGlobals();
 };
 
-export { load, loadFrom, unload, };
+export { load, loadFrom, unload };

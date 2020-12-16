@@ -1,8 +1,9 @@
 import { Global, Optional } from '@ephox/katamari';
+import { TinyMCE } from '../alien/Types';
 
-const getTinymce = () => Optional.from(Global.tinymce);
+const getTinymce = (): Optional<TinyMCE> => Optional.from(Global.tinymce);
 
-const deleteTinymceGlobals = () => {
+const deleteTinymceGlobals = (): void => {
   delete Global.tinymce;
   delete Global.tinyMCE;
 };
