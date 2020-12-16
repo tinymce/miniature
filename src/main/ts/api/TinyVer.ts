@@ -9,13 +9,13 @@ const createSemVer = (tinymce: FakeTiny) => {
   return semver.split('.').slice(0, 3).join('.');
 };
 
-const getVersion = (tinymce: FakeTiny) =>
+const getVersion = (tinymce: FakeTiny): Semver.Version =>
   Semver.parse(createSemVer(tinymce));
 
-const isLessThan = (tinymce: FakeTiny | undefined, version: string) =>
+const isLessThan = (tinymce: FakeTiny | undefined, version: string): boolean =>
   !tinymce ? false : Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.LT;
 
-const isGreaterThan = (tinymce: FakeTiny | undefined, version: string) =>
+const isGreaterThan = (tinymce: FakeTiny | undefined, version: string): boolean =>
   !tinymce ? false : Semver.compare(getVersion(tinymce), Semver.parse(version)) === Semver.Comparison.GT;
 
 export {

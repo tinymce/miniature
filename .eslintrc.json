@@ -1,11 +1,8 @@
 {
-  "extends": "plugin:@tinymce/standard",
+  "root": true,
+  "extends": "plugin:@tinymce/editor",
   "parserOptions": {
     "project": "tsconfig.json",
     "sourceType": "module"
-  },
-  "rules": {},
-  "settings": {
-    "import/internal-regex": "^tinymce/miniature.*"
   }
 }

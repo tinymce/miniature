@@ -23,7 +23,7 @@ const cmp = (a: Comparison, b: Comparison): Comparison => {
   return delta > 0 ? Comparison.GT : Comparison.LT;
 };
 
-export const nu = (major: number, minor: number, patch: number) =>
+export const nu = (major: number, minor: number, patch: number): Version =>
   ({ major, minor, patch });
 
 export const parse = (versionString: string): Version => {

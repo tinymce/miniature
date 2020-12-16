@@ -10,19 +10,31 @@ export type SetupCallbackStep = <T, U>(editor: any) => Step<T, U>;
 
 export type LoaderSetup = (callback: SetupCallback, settings: Record<string, any>, success: SuccessCallback, failure: FailureCallback) => void;
 
-export const setupVersion = (version: string, testPlugins: string[], callback: SetupCallback, settings: Record<string, any>, success: SuccessCallback, failure: FailureCallback, logs: TestLogs) => {
+export const setupVersion = (
+  version: string,
+  testPlugins: string[],
+  callback: SetupCallback,
+  settings: Record<string, any>,
+  success: SuccessCallback,
+  failure: FailureCallback,
+  logs: TestLogs
+): void => {
   const plugins = readPlugins(testPlugins);
 
   Pipeline.async({}, [
     TinyVersions.sWithVersion(version, Step.raw((_, next, die, initLogs) => {
       registerPlugins(plugins);
-      TinyLoader.setup((e, s, f) => callback(e, s, f, initLogs), settings, (v, nextLogs) => next(v, nextLogs || initLogs), (e, nextLogs) => die(e, nextLogs || initLogs));
+      TinyLoader.setup(
+        (e, s, f) => callback(e, s, f, initLogs),
+        settings,
+        (v, nextLogs) => next(v, nextLogs || initLogs),
+        (e, nextLogs) => die(e, nextLogs || initLogs));
     })),
     sRegisterPlugins(plugins)
   ], success, failure, logs);
 };
 
-export const sSetupVersion = <T, U> (version: string, testPlugins: string[], callback: SetupCallbackStep, settings: Record<string, any>) =>
+export const sSetupVersion = <T, U>(version: string, testPlugins: string[], callback: SetupCallbackStep, settings: Record<string, any>): Step<T, U> =>
   Step.raw((_, next, die, initLogs) =>
     setupVersion(version, testPlugins, (editor, onSuccess, onError, logs) => {
       Pipeline.async({}, [ callback(editor) ], onSuccess, onError, logs);

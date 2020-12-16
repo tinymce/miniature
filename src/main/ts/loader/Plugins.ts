@@ -21,7 +21,7 @@ const readAllPlugins = (): PluginDetails[] =>
 const readPlugins = (pluginNames: string[]): PluginDetails[] =>
   Arr.filter(readAllPlugins(), (plugin) => Arr.contains(pluginNames, plugin.name));
 
-const registerPlugins = (plugins: PluginDetails[]) => {
+const registerPlugins = (plugins: PluginDetails[]): void => {
   getTinymce().each((tinymce) => {
     Arr.each(plugins, (plugin) => {
       plugin.url.each((url) => tinymce.PluginManager.urls[plugin.name] = url);
@@ -30,7 +30,7 @@ const registerPlugins = (plugins: PluginDetails[]) => {
   });
 };
 
-const sRegisterPlugins = (plugins: PluginDetails[]) =>
+const sRegisterPlugins = (plugins: PluginDetails[]): Step<unknown, unknown> =>
   Step.sync(() => registerPlugins(plugins));
 
 export {
