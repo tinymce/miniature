@@ -1,6 +1,6 @@
 {
   "name": "@tinymce/miniature",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "npm run lint && npm run build",
