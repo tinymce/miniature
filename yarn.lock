@@ -23,50 +23,54 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@ephox/agar@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@ephox/agar/-/agar-5.0.1.tgz#8edec2f5df6b57a2c5291abed83eb68d7b2940ce"
-  integrity sha512-ynhEI82D0DnEDHCQkNarzV1oS85C9Ek37PQDpMDezutEVJON+wzJOvLPcVkeKhY7GoyuvSx+AjZGc+YjW/rmyA==
+"@ephox/agar@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@ephox/agar/-/agar-5.2.1.tgz#b56f3ba2ec3c822474b4af019fcd51d60263b573"
+  integrity sha512-umqo0+ClTxn/LcDM0mrEQYeVCgk+IeZ9lMSGmXclNFqrrMUIwJciMZwzUU3IwD9BfHZg++KVHnEyFnWGJ8wvBQ==
   dependencies:
-    "@ephox/bedrock-client" "^9.3.2"
-    "@ephox/jax" "^5.0.1"
-    "@ephox/sand" "^4.0.1"
-    "@ephox/sugar" "^7.0.1"
+    "@ephox/bedrock-client" "^11.0.0"
+    "@ephox/bedrock-common" "^11.0.0"
+    "@ephox/jax" "^5.0.5"
+    "@ephox/sand" "^4.0.5"
+    "@ephox/sugar" "^7.1.1"
     "@ephox/wrap-jsverify" "^2.0.1"
+    "@ephox/wrap-promise-polyfill" "^2.2.0"
     "@ephox/wrap-sizzle" "^4.0.0"
     tslib "^2.0.0"
 
-"@ephox/bedrock-client@^9.3.2", "@ephox/bedrock-client@^9.6.1":
-  version "9.6.1"
-  resolved "https://registry.yarnpkg.com/@ephox/bedrock-client/-/bedrock-client-9.6.1.tgz#51b34012035911da11270872a5ab49e168cb7e65"
-  integrity sha512-IQlp+NzxC+oQ017WdU5w/Gesc13qmdqJJLwA5mhpOW5j+KSyCyD1oOxaBQ8f5qUTa5jEFFHe2uw6gAOvjSOCkQ==
+"@ephox/bedrock-client@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@ephox/bedrock-client/-/bedrock-client-11.0.0.tgz#99b61623d9b4ca78142776c90ad1e5b402a5d6ac"
+  integrity sha512-e12u6NUk3o1pe7rmXKXhNlAtgN1763vicV6tH9QUGWa9N9pglicLhVzB+/d/GnVZ728FfptBISV9lUkcOBXhHQ==
   dependencies:
-    "@ephox/bedrock-common" "^9.3.2"
+    "@ephox/bedrock-common" "^11.0.0"
     "@ephox/dispute" "^1.0.3"
 
-"@ephox/bedrock-common@^9.3.2":
-  version "9.3.2"
-  resolved "https://registry.yarnpkg.com/@ephox/bedrock-common/-/bedrock-common-9.3.2.tgz#e17352766133089c77af475d5b8add5095eccd58"
-  integrity sha512-Ilmsn6Il5UULthq0fl39W1256a3tS+33vnO46TTqiijrkE87BswJ+Kp2ZKddNWlaY2l+wQCOgPLra9x5l/Q/Cg==
-
-"@ephox/bedrock-runner@^9.7.0":
-  version "9.7.0"
-  resolved "https://registry.yarnpkg.com/@ephox/bedrock-runner/-/bedrock-runner-9.7.0.tgz#3aa2d341ea5cb1e6e3ec786174b42f76dd1b15d1"
-  integrity sha512-eALt1i38NPmqqsyBltzwlrtqhut17GjMpeA++aSxvgCq0/BtleLjb5PkV5K5P5YRvxhpSiqmRYi9T6c9qlm/5Q==
+"@ephox/bedrock-common@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@ephox/bedrock-common/-/bedrock-common-11.0.0.tgz#a0c39dd37979b52818bf11ceb448c3b1a628c819"
+  integrity sha512-Fu7XTRfE0Nidw6caOC2dOThmgWp6xKDhHLIzrh//kRivB3q+2AqQC1sc/5iKyZKjXZIFeA0nM/OF8qAX8y5BVA==
   dependencies:
-    "@ephox/bedrock-common" "^9.3.2"
     diff "^4.0.1"
+
+"@ephox/bedrock-runner@^11.0.1":
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/@ephox/bedrock-runner/-/bedrock-runner-11.0.1.tgz#7ffd899546473d7b28129c39fb9ef19b23f894e6"
+  integrity sha512-LVR4qU3XVzrJvPJJcmqLstZ1TXi0FWOqOcHqNPkbVUkHUgEQ9ndSyUyzFGRys/g1rz5YJ/LsTYVaQGs6JFcPWQ==
+  dependencies:
+    "@ephox/bedrock-common" "^11.0.0"
+    "@ephox/wrap-promise-polyfill" "^2.2.0"
     jquery "^3.4.1"
     querystringify "^2.1.1"
 
-"@ephox/bedrock-server@^9.7.1":
-  version "9.7.1"
-  resolved "https://registry.yarnpkg.com/@ephox/bedrock-server/-/bedrock-server-9.7.1.tgz#d2df1b9d2ecae134f483345a57510fc32b3d612d"
-  integrity sha512-vdaQbwVwjYGc1KRZyqOin9NAMVHgj7/6EQv/8hXqe0aozNdKsudZ1atFgLF28KRXLVv5HSFJz5QczbQ4gng0Ng==
+"@ephox/bedrock-server@^11.1.0":
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/@ephox/bedrock-server/-/bedrock-server-11.1.0.tgz#aaf484d17a88ec0f9dc4c7d20e7df303ed7bf294"
+  integrity sha512-xw7XXREL8Hx1r0qU8OC3QThsSSf9uX1rcJgxpLxLQeV8n4giE9TDPWarKnBVYoJ3PcSWWjh9nbRMfOkIrqP6ZQ==
   dependencies:
-    "@ephox/bedrock-client" "^9.6.1"
-    "@ephox/bedrock-common" "^9.3.2"
-    "@ephox/bedrock-runner" "^9.7.0"
+    "@ephox/bedrock-client" "^11.0.0"
+    "@ephox/bedrock-common" "^11.0.0"
+    "@ephox/bedrock-runner" "^11.0.1"
     async "^3.0.0"
     command-line-args "^5.0.0"
     command-line-usage "^6.0.0"
@@ -103,50 +107,50 @@
   resolved "https://registry.yarnpkg.com/@ephox/dispute/-/dispute-1.0.4.tgz#9cc03a740548f2b3db43ac544050b7e3b36651dd"
   integrity sha512-PzklC1q7Flovi/pnxTFsY1pPKaEAm0whC+lFXM2Sh4Fc+lUt7A/UMRoV9bg9DyeTbD/mWEr/hvdyJp6hI14uKg==
 
-"@ephox/jax@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@ephox/jax/-/jax-5.0.1.tgz#8caff00049b22f7c5e6e1eca0a2003d59dfa53ae"
-  integrity sha512-BqGO/u2I33Ahao+TETsKfYxhbfuryrLPLQOCLfIvHGZJ3M2OxhvaOlL39ePN9urK1UD23BmDmUtO6BUR3iAJGQ==
+"@ephox/jax@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@ephox/jax/-/jax-5.0.5.tgz#651a4b1b6add020cdbc67c89e9004614e825d09f"
+  integrity sha512-W/vqkYu6anJHcdf0EsiO/K9wDAw/qMnqHtAo0MFJYqLIw5xsM1XcVNcf48a6PdVFqEN0mK8om17FuFDipWplOg==
   dependencies:
-    "@ephox/katamari" "^7.0.1"
+    "@ephox/katamari" "^7.1.3"
     tslib "^2.0.0"
 
-"@ephox/katamari@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@ephox/katamari/-/katamari-7.0.1.tgz#9597018617734641a8a00a9ffa6070e47a4bfd84"
-  integrity sha512-eYfupxI4EedVuSmV+8Csiv2m23dcKkwjaZkzU8oqAY0bV20lavlI7+7s0PlGshjnHUh0eTo7ol6NmsGZjOeLNA==
+"@ephox/katamari@^7.1.3":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@ephox/katamari/-/katamari-7.1.3.tgz#debbc056431167c3d1ad13ff58b68bc37043f09c"
+  integrity sha512-QkmNZspqEVnirjdrkR+9zumNRe6dk1PCQ9apq1A0Ex8eQxIwJtfGdQ1sjytnGzqitiUxyEEPK5NKROT9pEn5Gg==
   dependencies:
     "@ephox/dispute" "^1.0.3"
     "@ephox/wrap-promise-polyfill" "^2.2.0"
     tslib "^2.0.0"
 
-"@ephox/mcagar@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@ephox/mcagar/-/mcagar-5.0.1.tgz#ceaf864ac1c2009d92894e7fef8110eb6622b437"
-  integrity sha512-tKlVtM8q9FMMNNMW+Hf9nGWd5nmyY49cgwHm7SLiVNkt5SqZUhbwUF/cxsx7za+95TV5JtXm2WF+xeksjHKR5A==
+"@ephox/mcagar@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@ephox/mcagar/-/mcagar-6.0.1.tgz#f14acf97726f177843cc1a1bf307c657fed89e62"
+  integrity sha512-25niOePoQP6HHFQnEze5zaRURq8x/C7zNhLmyD12EEA9mXgyPmIP2tX2LD3LjBjheu76283VvUnKOKTSr37a5w==
   dependencies:
-    "@ephox/agar" "^5.0.1"
-    "@ephox/katamari" "^7.0.1"
-    "@ephox/sand" "^4.0.1"
-    "@ephox/sugar" "^7.0.1"
+    "@ephox/agar" "^5.2.1"
+    "@ephox/katamari" "^7.1.3"
+    "@ephox/sand" "^4.0.5"
+    "@ephox/sugar" "^7.1.1"
     "@ephox/wrap-jsverify" "^2.0.1"
     tslib "^2.0.0"
 
-"@ephox/sand@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@ephox/sand/-/sand-4.0.1.tgz#e55937950979db9a0093b778c5fb33637d31ed72"
-  integrity sha512-wHwTK6jyMKQ1y+xhLTwb9kME1S9746Mp4mi4x3MmUYNo9u+/QSSc1v6gSHPTMWz+dkGMA5l6O1kJWECoYt0Cvg==
+"@ephox/sand@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@ephox/sand/-/sand-4.0.5.tgz#81fabb9648b2c15b40b841973471af70cb19a4d3"
+  integrity sha512-E2JSa8FpZnzPuBA7rWE6N2Jy4fnRL3JHxBtf80ymiTScr04m439/Ea5Dpz+ShYWTVTgQ839K4SSWDjs9+YOTTg==
   dependencies:
-    "@ephox/katamari" "^7.0.1"
+    "@ephox/katamari" "^7.1.3"
     tslib "^2.0.0"
 
-"@ephox/sugar@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@ephox/sugar/-/sugar-7.0.1.tgz#4aaf2b779ac044e63577e130d3f4db3667d1083f"
-  integrity sha512-ipBUsP6J7VaAv4C9b0admPKPpOKsBfxtb1oQJQ2YDK6BLU8EnJyZR7CvBpp4rS3m7EK4ZZqAxDExkntaO59taQ==
+"@ephox/sugar@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@ephox/sugar/-/sugar-7.1.1.tgz#e86aee36fb014bfe8d326f6321171357975be889"
+  integrity sha512-OmYUJPZM+BIOCnMA+K71mO/Z51mfE1d+QZx/PhA8vQkRowqsMnttEnihbmJcsFKcnoUwLuxU429hgm0W56f0nw==
   dependencies:
-    "@ephox/katamari" "^7.0.1"
-    "@ephox/sand" "^4.0.1"
+    "@ephox/katamari" "^7.1.3"
+    "@ephox/sand" "^4.0.5"
 
 "@ephox/wrap-jsverify@^2.0.1":
   version "2.0.1"
@@ -212,10 +216,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tinymce/eslint-plugin@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@tinymce/eslint-plugin/-/eslint-plugin-1.7.1.tgz#5e3685a6ab4e613636fd79f8126058f33ca0fe71"
-  integrity sha512-Y45sApqyWZ799CNyI+TgtrhtDT4MQ9bGd7qrZvA62YkpTqcZMNkeSKTpYwaYg0owiegAc6v3fWL7M6G6Bs7uVg==
+"@tinymce/eslint-plugin@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@tinymce/eslint-plugin/-/eslint-plugin-1.7.2.tgz#112ea7e8b341e5d34929ee7fd244cb11f4405e62"
+  integrity sha512-+Cu32nMwS4ceuqkoFkBD701BozIxLmZdTK0SZCutjb4ktKfdY55QeufShsCIbfMQdh3fbxx1J3MtytuE9kxG/Q==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.0.0"
     "@typescript-eslint/parser" "^4.0.0"
