@@ -1,12 +1,12 @@
 {
   "name": "@tinymce/miniature",
-  "version": "3.1.2-rc",
+  "version": "3.2.0-rc",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "tsc",
     "lint": "eslint 'src/**/*.ts'",
     "build": "tsc",
-    "test": "yarn lint && bedrock-auto -b phantomjs -d src/test/ts/browser",
+    "test": "yarn lint && bedrock-auto -b chrome-headless -d src/test/ts/browser",
     "test-manual": "bedrock -d src/test/ts/browser"
   },
   "repository": {
