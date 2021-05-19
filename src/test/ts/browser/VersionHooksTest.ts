@@ -1,0 +1,42 @@
+import { Assertions } from '@ephox/agar';
+import { before, context, describe, it } from '@ephox/bedrock-client';
+import { Arr } from '@ephox/katamari';
+import { FakeTiny } from 'tinymce/miniature/alien/Types';
+import * as VersionHooks from 'tinymce/miniature/api/VersionHooks';
+import { assertVersion } from '../module/AssertVersion';
+
+declare const tinymce: any;
+
+const TestPlugin = () => {
+  tinymce.PluginManager.add('test', (editor: FakeTiny, url: string) => ({ url }));
+};
+
+describe('VersionHooksTest', () => {
+  before(() => {
+    tinymce.PluginManager.urls.test = '/project/dist/test';
+    TestPlugin();
+  });
+
+  Arr.each([
+    { loadVersion: '4.5.x', major: 4, minor: 5 },
+    { loadVersion: '4.8.x', major: 4, minor: 8 },
+    { loadVersion: '5.0.x', major: 5, minor: 0 },
+  ], (spec) => {
+    context(`Test loading ${spec.loadVersion}`, () => {
+      const hook = VersionHooks.bddSetupVersion(spec.loadVersion, {
+        plugins: [ 'test', 'code' ]
+      }, {
+        test: [ TestPlugin ]
+      });
+
+      it('should match correct version', () => {
+        assertVersion(spec.major, spec.minor);
+      });
+
+      it('should have the correct plugin url', () => {
+        const editor = hook.editor();
+        Assertions.assertEq('Should be the expected url', '/project/dist/test', editor.plugins.test.url);
+      });
+    });
+  });
+});
