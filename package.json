@@ -1,6 +1,6 @@
 {
   "name": "@tinymce/miniature",
-  "version": "3.2.0",
+  "version": "3.2.1-rc",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "tsc",
