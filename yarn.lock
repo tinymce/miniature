@@ -6094,9 +6094,9 @@ timers-browserify@^2.0.4:
   integrity sha512-qXymNZmAR5fSp5Lp3mVMtHxpiTMvba7TV6wGFcyJP5eUGIhsPw+XkezjvWCFs7lrW+ti0YBBblJNzxG5/8ZtFg==
 
 tinymce@^5.2.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-5.6.0.tgz#b5eda4888e1a607ddd545619cfaa137d59de14b4"
-  integrity sha512-f8LsyT80j8hD4wrL8Sac0DWDG5k10cDyykL/qkJ6kexn1KMt7w1ByrGlUm53XCYDqtavBA5snTU7odioMwSXSQ==
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-5.8.1.tgz#f6ace70e47cf6b5b0a63f52cf38e4ae04a35ba58"
+  integrity sha512-1zGXdZplWQafstlC7sri0ttCgMagsiXDc9N3I8JNrPOsWAeTfq4AAJWZoxsQBYn8gYcuPu/WzMKG5SoJjxI1VA==
 
 tmp@^0.2.1:
   version "0.2.1"
