@@ -2,6 +2,7 @@ import { after, afterEach, before } from '@ephox/bedrock-client';
 import { Arr, Obj, Optional } from '@ephox/katamari';
 import { TinyHooks } from '@ephox/mcagar';
 import { SugarElement } from '@ephox/sugar';
+
 import { load } from '../loader/Loader';
 import { PluginDetails, readPlugins, registerPlugins } from '../loader/Plugins';
 

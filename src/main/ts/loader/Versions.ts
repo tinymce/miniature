@@ -1,4 +1,5 @@
 import { GeneralSteps, Step } from '@ephox/agar';
+
 import { load, loadFrom, unload } from './Loader';
 import { PluginDetails, readAllPlugins, registerPlugins } from './Plugins';
 

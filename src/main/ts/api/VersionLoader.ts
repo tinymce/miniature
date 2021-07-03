@@ -1,5 +1,6 @@
 import { Pipeline, Step, TestLogs } from '@ephox/agar';
 import { TinyLoader } from '@ephox/mcagar';
+
 import { readPlugins, registerPlugins, sRegisterPlugins } from '../loader/Plugins';
 import * as TinyVersions from '../loader/Versions';
 

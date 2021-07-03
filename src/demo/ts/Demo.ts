@@ -1,4 +1,4 @@
-import { TinyVer } from 'tinymce/miniature/api/Main';
+import * as TinyVer from 'tinymce/miniature/api/TinyVer';
 
 /* eslint-disable no-console */
 

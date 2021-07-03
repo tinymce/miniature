@@ -1,5 +1,6 @@
 import { Step } from '@ephox/agar';
 import { Arr, Obj, Optional } from '@ephox/katamari';
+
 import { FakeTiny } from '../alien/Types';
 import { getTinymce } from './Globals';
 

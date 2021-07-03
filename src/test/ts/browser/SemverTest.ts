@@ -1,4 +1,5 @@
 import { UnitTest, assert } from '@ephox/bedrock-client';
+
 import * as Semver from 'tinymce/miniature/ver/Semver';
 
 UnitTest.test('SemverTest', () => {

@@ -1,5 +1,6 @@
 import { Chain, Step } from '@ephox/agar';
 import { Assert } from '@ephox/bedrock-client';
+
 import { Editor, FakeTiny } from 'tinymce/miniature/alien/Types';
 import { getTinymce } from 'tinymce/miniature/loader/Globals';
 
