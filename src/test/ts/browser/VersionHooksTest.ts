@@ -1,8 +1,10 @@
 import { Assertions } from '@ephox/agar';
 import { before, context, describe, it } from '@ephox/bedrock-client';
 import { Arr } from '@ephox/katamari';
+
 import { FakeTiny } from 'tinymce/miniature/alien/Types';
 import * as VersionHooks from 'tinymce/miniature/api/VersionHooks';
+
 import { assertVersion } from '../module/AssertVersion';
 
 declare const tinymce: any;
