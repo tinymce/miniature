@@ -7,7 +7,8 @@
     "lint": "eslint 'src/**/*.ts'",
     "build": "tsc",
     "test": "yarn lint && bedrock-auto -b chrome-headless -d src/test/ts/browser",
-    "test-manual": "bedrock -d src/test/ts/browser"
+    "test-manual": "bedrock -d src/test/ts/browser",
+    "start": "webpack-cli --watch"
   },
   "repository": {
     "type": "git",
@@ -30,11 +31,17 @@
     "@ephox/bedrock-server": "^11.3.1",
     "@tinymce/beehive-flow": "^0.16.0",
     "@tinymce/eslint-plugin": "^1.9.1",
+    "fork-ts-checker-webpack-plugin": "^6.2.12",
+    "source-map-loader": "^3.0.0",
     "tinymce": "^5.2.0",
     "tinymce-4.5.x": "npm:tinymce@4.5.x",
     "tinymce-4.8.x": "npm:tinymce@4.8.x",
     "tinymce-5.0.x": "npm:tinymce@5.0.x",
-    "typescript": "^4.0.0"
+    "ts-loader": "^9.2.3",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "typescript": "^4.0.0",
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
   },
   "files": [
     "lib/main",
