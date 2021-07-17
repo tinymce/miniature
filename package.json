@@ -29,7 +29,7 @@
   "devDependencies": {
     "@ephox/bedrock-client": "^11.3.0",
     "@ephox/bedrock-server": "^11.3.1",
-    "@tinymce/beehive-flow": "^0.16.0",
+    "@tinymce/beehive-flow": "^0.17.0",
     "@tinymce/eslint-plugin": "^1.9.1",
     "fork-ts-checker-webpack-plugin": "^6.2.12",
     "source-map-loader": "^3.0.0",
