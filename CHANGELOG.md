@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## 4.0.0 - 2021-08-26
+
+### Changed
+- Upgraded to Katamari 8.0, which includes breaking changes to the `Optional` API used in this module.
+- Upgraded to McAgar 7.0, which includes breaking changes to how tinymce is imported.
+
 ## 3.2.0 - 2021-05-28
 
 ### Added

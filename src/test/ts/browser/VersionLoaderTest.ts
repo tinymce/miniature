@@ -1,5 +1,6 @@
 import { Assertions, GeneralSteps, Pipeline } from '@ephox/agar';
 import { UnitTest } from '@ephox/bedrock-client';
+import 'tinymce';
 
 import { FakeTiny } from 'tinymce/miniature/alien/Types';
 import * as VersionLoader from 'tinymce/miniature/api/VersionLoader';

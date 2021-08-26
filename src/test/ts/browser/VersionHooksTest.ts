@@ -1,6 +1,7 @@
 import { Assertions } from '@ephox/agar';
 import { before, context, describe, it } from '@ephox/bedrock-client';
 import { Arr } from '@ephox/katamari';
+import 'tinymce';
 
 import { FakeTiny } from 'tinymce/miniature/alien/Types';
 import * as VersionHooks from 'tinymce/miniature/api/VersionHooks';
