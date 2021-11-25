@@ -11,7 +11,10 @@ import { assertVersion } from '../module/AssertVersion';
 declare const tinymce: any;
 
 const TestPlugin = () => {
-  tinymce.PluginManager.add('test', (editor: FakeTiny, url: string) => ({ url }));
+  // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+  tinymce.PluginManager.add('test', function (editor: FakeTiny, url: string) {
+    return { url };
+  });
 };
 
 describe('VersionHooksTest', () => {
