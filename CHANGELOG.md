@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Removed
+- Removed support for Microsoft Internet Explorer and anything that doesn't support ES2018.
+
 ## 4.0.0 - 2021-08-26
 
 ### Changed

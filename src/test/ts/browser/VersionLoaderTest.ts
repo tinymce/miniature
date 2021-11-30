@@ -10,7 +10,10 @@ import { sAssertVersion } from '../module/AssertVersion';
 declare const tinymce: any;
 
 tinymce.PluginManager.urls.test = '/project/dist/test';
-tinymce.PluginManager.add('test', (editor: FakeTiny, url: string) => ({ url }));
+// eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+tinymce.PluginManager.add('test', function (editor: FakeTiny, url: string) {
+  return { url };
+});
 
 const sTestVersion = (loadVersion: string, expectedMajor: number, expectedMinor: number) =>
   VersionLoader.sSetupVersion(loadVersion, [ 'test' ], (editor) => GeneralSteps.sequence([
@@ -25,5 +28,5 @@ UnitTest.asynctest('TinyLoaderVersionTest', (success, failure) => {
     sTestVersion('4.5.x', 4, 5),
     sTestVersion('4.8.x', 4, 8),
     sTestVersion('5.0.x', 5, 0)
-  ], () => success(), failure);
+  ], success, failure);
 });
