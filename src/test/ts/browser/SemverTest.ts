@@ -1,11 +1,11 @@
-import { UnitTest, assert } from '@ephox/bedrock-client';
+import { Assert, UnitTest } from '@ephox/bedrock-client';
 
 import * as Semver from 'tinymce/miniature/ver/Semver';
 
 UnitTest.test('SemverTest', () => {
 
   const assertSemverCompare = (expected: Semver.Comparison, input: Semver.Version, versionString: string) => {
-    assert.eq(expected, Semver.compare(input, Semver.parse(versionString)));
+    Assert.eq('', expected, Semver.compare(input, Semver.parse(versionString)));
   };
 
   // patch
