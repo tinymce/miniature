@@ -1,4 +1,4 @@
-import { assert, UnitTest } from '@ephox/bedrock-client';
+import { Assert, UnitTest } from '@ephox/bedrock-client';
 
 import { FakeTiny } from 'tinymce/miniature/alien/Types';
 import * as TinyVer from 'tinymce/miniature/api/TinyVer';
@@ -11,7 +11,7 @@ interface VersionBlock {
 
 UnitTest.test('TinyVerTest', () => {
   const assertgetVersion = (expected: VersionBlock, tiny: FakeTiny) => {
-    assert.eq(expected, TinyVer.getVersion(tiny));
+    Assert.eq('', expected, TinyVer.getVersion(tiny));
   };
   const fakeTiny = (majorVersion: string, minorVersion: string): FakeTiny => ({ majorVersion, minorVersion });
   const v = (major: number, minor: number, patch: number): VersionBlock => ({ major, minor, patch });
@@ -21,8 +21,8 @@ UnitTest.test('TinyVerTest', () => {
 
   assertgetVersion(v(0, 0, 0), fakeTiny('arne', 'bertil.tommy'));
 
-  assert.eq(true, TinyVer.isLessThan(fakeTiny('4', '5.5'), '4.6.5'));
-  assert.eq(true, TinyVer.isGreaterThan(fakeTiny('4', '5.5'), '4.4.5'));
-  assert.eq(false, TinyVer.isGreaterThan(undefined, '4.5.5'));
-  assert.eq(false, TinyVer.isLessThan(undefined, '4.5.5'));
+  Assert.eq('', true, TinyVer.isLessThan(fakeTiny('4', '5.5'), '4.6.5'));
+  Assert.eq('', true, TinyVer.isGreaterThan(fakeTiny('4', '5.5'), '4.4.5'));
+  Assert.eq('', false, TinyVer.isGreaterThan(undefined, '4.5.5'));
+  Assert.eq('', false, TinyVer.isLessThan(undefined, '4.5.5'));
 });
