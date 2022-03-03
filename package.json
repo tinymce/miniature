@@ -21,14 +21,14 @@
   "author": "Tiny Technologies",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ephox/agar": "^7.0.0-alpha",
-    "@ephox/katamari": "^9.0.0-alpha",
-    "@ephox/mcagar": "^8.0.0-alpha",
-    "@ephox/sugar": "^9.0.0-alpha"
+    "@ephox/agar": "^7.0.1",
+    "@ephox/katamari": "^9.0.1",
+    "@ephox/mcagar": "^8.0.1",
+    "@ephox/sugar": "^9.0.1"
   },
   "devDependencies": {
     "@ephox/bedrock-client": "^13.0.0",
-    "@ephox/bedrock-server": "^13.0.0",
+    "@ephox/bedrock-server": "^13.1.0",
     "@tinymce/beehive-flow": "^0.17.0",
     "@tinymce/eslint-plugin": "^2.0.1",
     "fork-ts-checker-webpack-plugin": "^6.5.0",
