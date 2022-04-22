@@ -433,10 +433,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tinymce/beehive-flow@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@tinymce/beehive-flow/-/beehive-flow-0.17.0.tgz#a86972a60eafe30d7b3874e690d812d1ced93cf9"
-  integrity sha512-bXt2qghT56bCkYywXuYl+bKhLznTo3bgJvFVsSHtFK/fgivwhByry4tGQPs65+0QydImRIcwfGKVqXvYJ7aHZA==
+"@tinymce/beehive-flow@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@tinymce/beehive-flow/-/beehive-flow-0.18.0.tgz#a89b6e83d371f5307200bed1c04538320a35954f"
+  integrity sha512-aTnaPuH+A4qZE/UsI/JeDUk3TvRbhEcv+KUMhvFVWutsrqJ/Llh33YmYbpX3iG+MNXj0X7D538O3riIw5Z0ppg==
   dependencies:
     cross-spawn-promise "^0.10.2"
     fp-ts "^2.9.5"
@@ -444,7 +444,7 @@
     luxon "^1.26.0"
     properties-reader "^2.2.0"
     read-pkg "^5.2.0"
-    simple-git "^2.35.1"
+    simple-git "^3.7.0"
     tmp "^0.2.1"
     tslib "^2.1.0"
     yargs "^16.2.0"
@@ -1774,7 +1774,14 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@4.3.2, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2:
+debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.3:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+  dependencies:
+    ms "2.1.2"
+
+debug@4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
@@ -5119,14 +5126,14 @@ signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
   integrity sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==
 
-simple-git@^2.35.1:
-  version "2.40.0"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-2.40.0.tgz#1f9da964caa032290ec25cb06ccacc2c17d99d75"
-  integrity sha512-7IO/eQwrN5kvS38TTu9ljhG9tx2nn0BTqZOmqpPpp51TvE44YIvLA6fETqEVA8w/SeEfPaVv6mk7Tsk9Jns+ag==
+simple-git@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-3.7.0.tgz#b0aac4c2e6e8118c115460ed93d072cda966dd42"
+  integrity sha512-O9HlI83ywqkYqnr7Wh3CqKNNrMkfjzpKQSGtJAhk7+H5P+lAxHBTIPgu/eO/0D9pMciepgs433p0d5S+NYv5Jg==
   dependencies:
     "@kwsites/file-exists" "^1.1.1"
     "@kwsites/promise-deferred" "^1.1.1"
-    debug "^4.3.1"
+    debug "^4.3.3"
 
 sizzle@^2.3.4:
   version "2.3.6"
