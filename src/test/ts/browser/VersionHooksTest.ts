@@ -27,6 +27,7 @@ describe('VersionHooksTest', () => {
     { loadVersion: '4.5.x', major: 4, minor: 5 },
     { loadVersion: '4.8.x', major: 4, minor: 8 },
     { loadVersion: '5.0.x', major: 5, minor: 0 },
+    { loadVersion: '6.0.x', major: 6, minor: 0 },
   ], (spec) => {
     context(`Test loading ${spec.loadVersion}`, () => {
       const hook = VersionHooks.bddSetupVersion(spec.loadVersion, {
