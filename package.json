@@ -21,10 +21,10 @@
   "author": "Tiny Technologies",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ephox/agar": "^7.0.1",
-    "@ephox/katamari": "^9.0.1",
-    "@ephox/mcagar": "^8.0.1",
-    "@ephox/sugar": "^9.0.1"
+    "@ephox/agar": "^7.1.0-alpha.0",
+    "@ephox/katamari": "^9.0.2-alpha.0",
+    "@ephox/mcagar": "^8.0.2-alpha.0",
+    "@ephox/sugar": "^9.0.2-alpha.0"
   },
   "devDependencies": {
     "@ephox/bedrock-client": "^13.0.0",
