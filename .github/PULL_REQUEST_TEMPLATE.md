@@ -12,4 +12,3 @@ Before merging:
 * [ ] Ensure internal dependencies are on appropriate versions
   * For stable releases, all dependencies must be stable
   * For release candidates, all dependencies must be release candidates or stable
-* [ ] Review comments resolved
