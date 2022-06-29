@@ -21,14 +21,14 @@
   "author": "Tiny Technologies",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ephox/agar": "^7.1.0-alpha.0",
-    "@ephox/katamari": "^9.0.2-alpha.0",
-    "@ephox/mcagar": "^8.0.2-alpha.0",
-    "@ephox/sugar": "^9.0.2-alpha.0"
+    "@ephox/agar": "^7.1.1",
+    "@ephox/katamari": "^9.0.3",
+    "@ephox/mcagar": "^8.0.3",
+    "@ephox/sugar": "^9.0.3"
   },
   "devDependencies": {
     "@ephox/bedrock-client": "^13.0.0",
-    "@ephox/bedrock-server": "^13.1.0",
+    "@ephox/bedrock-server": "^13.2.1",
     "@tinymce/beehive-flow": "^0.18.0",
     "@tinymce/eslint-plugin": "^2.0.1",
     "fork-ts-checker-webpack-plugin": "^6.5.0",
@@ -38,11 +38,11 @@
     "tinymce-4.8.x": "npm:tinymce@4.8.x",
     "tinymce-5.0.x": "npm:tinymce@5.0.x",
     "tinymce-6.0.x": "npm:tinymce@6.0.x",
-    "ts-loader": "^9.2.6",
+    "ts-loader": "^9.3.1",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
-    "typescript": "^4.6.4",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.7.2"
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "files": [
     "lib/main",
