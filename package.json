@@ -1,6 +1,6 @@
 {
   "name": "@tinymce/miniature",
-  "version": "5.0.2-rc",
+  "version": "6.0.0-rc",
   "description": "This library checks versions of TinyMCE.",
   "scripts": {
     "prepublishOnly": "tsc",
@@ -34,8 +34,6 @@
     "fork-ts-checker-webpack-plugin": "^6.5.0",
     "source-map-loader": "^3.0.0",
     "tinymce": "^6.0.0",
-    "tinymce-4.5.x": "npm:tinymce@4.5.x",
-    "tinymce-4.8.x": "npm:tinymce@4.8.x",
     "tinymce-5.0.x": "npm:tinymce@5.0.x",
     "tinymce-6.0.x": "npm:tinymce@6.0.x",
     "ts-loader": "^9.3.1",
