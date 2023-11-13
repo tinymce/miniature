@@ -19,7 +19,7 @@ const load = (version: string, success: () => void, failure: (err: Error) => voi
   const packageName = versionToPackageName(version);
 
   unload();
-  loadScript(`/project/node_modules/${packageName}/tinymce.min.js`, () => {
+  loadScript(`/project/node_modules/${packageName}/js/tinymce/tinymce.min.js`, () => {
     updateTinymceUrls(versionToPackageName(version));
     success();
   }, failure);

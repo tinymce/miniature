@@ -9,7 +9,7 @@ import { sAssertVersion } from '../module/AssertVersion';
 
 declare const tinymce: any;
 
-tinymce.PluginManager.urls.test = '/project/dist/test';
+tinymce.PluginManager.urls.test = '/project/@tiny-premium/@tinymce/miniature/dist/test';
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 tinymce.PluginManager.add('test', function (editor: FakeTiny, url: string) {
   return { url };
@@ -18,7 +18,7 @@ tinymce.PluginManager.add('test', function (editor: FakeTiny, url: string) {
 const sTestVersion = (loadVersion: string, expectedMajor: number, expectedMinor: number) =>
   VersionLoader.sSetupVersion(loadVersion, [ 'test' ], (editor) => GeneralSteps.sequence([
     sAssertVersion(expectedMajor, expectedMinor),
-    Assertions.sAssertEq('Should be the expected url', '/project/dist/test', editor.plugins.test.url)
+    Assertions.sAssertEq('Should be the expected url', '/project/@tiny-premium/@tinymce/miniature/dist/test', editor.plugins.test.url)
   ]), {
     plugins: [ 'test', 'code' ]
   });

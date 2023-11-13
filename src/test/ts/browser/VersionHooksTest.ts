@@ -19,7 +19,7 @@ const TestPlugin = () => {
 
 describe('VersionHooksTest', () => {
   before(() => {
-    tinymce.PluginManager.urls.test = '/project/dist/test';
+    tinymce.PluginManager.urls.test = '/project/@tiny-premium/@tinymce/miniature/dist/test';
     TestPlugin();
   });
 
@@ -40,7 +40,7 @@ describe('VersionHooksTest', () => {
 
       it('should have the correct plugin url', () => {
         const editor = hook.editor();
-        Assertions.assertEq('Should be the expected url', '/project/dist/test', editor.plugins.test.url);
+        Assertions.assertEq('Should be the expected url', '/project/@tiny-premium/@tinymce/miniature/dist/test', editor.plugins.test.url);
       });
     });
   });

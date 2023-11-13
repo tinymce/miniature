@@ -8,10 +8,10 @@ const setTinymceBaseUrl = (tinymce: any, baseUrl: string): void => {
 
 const updateTinymceUrls = (packageName: string): void => {
   getTinymce().each((tinymce) => {
-    setTinymceBaseUrl(tinymce, `/project/node_modules/${packageName}`);
+    setTinymceBaseUrl(tinymce, `/project/node_modules/${packageName}/js/tinymce`);
   });
 };
-
+console.log('foo2')
 export {
   setTinymceBaseUrl,
   updateTinymceUrls
