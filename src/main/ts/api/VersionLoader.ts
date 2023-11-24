@@ -1,6 +1,7 @@
 import { Pipeline, Step, TestLogs } from '@ephox/agar';
 import { TinyLoader } from '@ephox/mcagar';
 
+import * as Loader from '../loader/Loader';
 import { readPlugins, registerPlugins, sRegisterPlugins } from '../loader/Plugins';
 import * as TinyVersions from '../loader/Versions';
 
@@ -42,4 +43,4 @@ export const sSetupVersion = <T, U>(version: string, testPlugins: string[], call
     }, settings, next, die, initLogs)
   );
 
-export const sWithVersion = TinyVersions.sWithVersion;
+export const pLoadVersion = (version: string): Promise<void> => new Promise((resolve, reject) => Loader.load(version, resolve, reject));
