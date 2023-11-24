@@ -18,7 +18,7 @@ export const setupVersion = (
   settings: Record<string, any>,
   success: SuccessCallback,
   failure: FailureCallback,
-  logs: TestLogs
+  logs: TestLogs = TestLogs.init()
 ): void => {
   const plugins = readPlugins(testPlugins);
 
