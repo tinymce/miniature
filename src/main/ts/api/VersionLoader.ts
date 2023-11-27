@@ -45,4 +45,8 @@ export const sSetupVersion = <T, U>(version: string, testPlugins: string[], call
 
 export const sWithVersion = TinyVersions.sWithVersion;
 
-export const pLoadVersion = (version: string): Promise<void> => new Promise((resolve, reject) => Loader.load(version, resolve, reject));
+export const pLoadVersion = (version: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    Loader.load(version, resolve, reject);
+  });
+};
