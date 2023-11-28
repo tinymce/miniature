@@ -6,8 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- `VersionLoader.pLoadVersion` function. #TINY-10394
+
 ### Removed
 - Removed support for TinyMCE 4.x. #TINY-10142
+
+### Changed
+- Made the `VersionLoader.setup` functions logs argument optional. #TINY-10394
 
 ## 5.0.1 - 2022-06-29
 
